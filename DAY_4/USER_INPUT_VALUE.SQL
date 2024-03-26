@@ -16,8 +16,8 @@
 -- UNDEFINE colum;
 
 
--- select * from &table_name
--- where &condition
--- order by &order_by;
+select * from &table_name
+where &condition
+order by &order_by;
 
 -- undefine table_name;
