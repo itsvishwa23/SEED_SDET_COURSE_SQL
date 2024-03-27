@@ -49,3 +49,13 @@
 
 -- select * from employees 
 -- where length(first_name)=5;
+
+
+-- select last_name,first_name,salary, LPAD(' ', length(salary)-1,'*') as padded_salary
+-- from employees;
+
+SELECT DISTINCT LENGTH(last_name)
+FROM employees;
+
+-- select first_name,last_name,length(first_name) as len from employees 
+-- where length(first_name)='5';

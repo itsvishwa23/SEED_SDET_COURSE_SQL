@@ -2,6 +2,7 @@
   "files.associations": {
     "CIRCLE_AREA_USING_RETURN_FUNCTION.C": "cpp",
     "ARRAY_OF_STRUCTURE.C": "cpp",
-    "SINGLE_ROW_FUNCTION_LAB_MANUAL.C": "cpp"
+    "SINGLE_ROW_FUNCTION_LAB_MANUAL.C": "cpp",
+    "JOBS_TABLE_PRAC.C": "cpp"
   }
 }

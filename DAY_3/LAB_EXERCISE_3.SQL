@@ -5,3 +5,13 @@
 -- from employees;
 
 -- select table_name from user_tables;
+
+
+select last_name,JOB_ID, MANAGER_ID
+from employees
+where MANAGER_ID IS NULL
+ORDER BY MANAGER_ID DESC;
+
+
+
+desc employees;
