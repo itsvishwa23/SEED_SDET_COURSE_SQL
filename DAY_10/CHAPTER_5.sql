@@ -1,7 +1,7 @@
 -- desc employees;
 
--- select LAST_NAME ||' earns monthly salary of '|| SALARY || ' and expects ' || salary*2 as Appraised_Salary 
--- from employees;
+select LAST_NAME ||' earns monthly salary of '|| SALARY || ' and expects ' || salary*2 as Appraised_Salary 
+from employees;
 
 -- SELECT LAST_NAME,HIRE_DATE,NEXT_DAY(ADD_MONTHS(HIRE_DATE,5),'MONDAY') AS salary_review_date
 -- FROM employees;
