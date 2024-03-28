@@ -30,3 +30,14 @@ where job_id='AD_PRES';
 
 -- select LAST_NAME,nvl(COMMISSION_PCT,0) as Comm
 -- from employees;
+
+
+
+-- select to_char(hire_date,'Q') from employees;
+
+
+--  SELECT LAST_NAME,HIRE_DATE,to_char(NEXT_DAY(ADD_MONTHS(HIRE_DATE,5),'MONDAY'),'day,dd,month,yyyy') AS salary_review_date
+--  FROM employees;
+
+
+-- select to_char(add_months(hire_date,3),'mon')as new from employees;

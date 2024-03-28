@@ -54,8 +54,23 @@
 -- select last_name,first_name,salary, LPAD(' ', length(salary)-1,'*') as padded_salary
 -- from employees;
 
-SELECT DISTINCT LENGTH(last_name)
-FROM employees;
+-- SELECT DISTINCT LENGTH(last_name)
+-- FROM employees;
 
 -- select first_name,last_name,length(first_name) as len from employees 
 -- where length(first_name)='5';
+
+-- desc employees;
+
+
+select FIRST_NAME,LAST_NAME,SALARY 
+from employees
+where JOB_ID in('SA_REP','ST_CLERK') and SALARY not in (2500,3500,7000) ;
+ 
+ select last_name,salary,COMMISSION_PCT 
+ from employees
+ where COMMISSION_PCT=0.2;
+
+
+
+
