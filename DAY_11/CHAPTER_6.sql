@@ -144,3 +144,6 @@
 -- group by department_id;
 
 desc employees;
+
+
+select to_char(hire_date,'yyyy') from employees;
