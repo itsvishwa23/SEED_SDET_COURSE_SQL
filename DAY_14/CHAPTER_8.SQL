@@ -74,15 +74,27 @@ select count(employee_id) from employees
 where department_id in(select department_id from departments where location_id in(select location_id from locations where city='Seattle'));
 
 
-
-
 select last_name,first_name,employee_id
 from employees 
 where department_id=(select department_id from employees where last_name='Davies');
 
+select first_name,hire_date from employees
+where hire_date>(select hire_date from employees where last_name='Taylor'  order by hire_date desc fetch first 1 rows only);
+
+
+select last_name,salary 
+from employees e
+where salary>(select avg(salary) from employees m where m.department_id=e.department_id);
 
 
 
 
+select last_name,salary 
+from employees
+where salary=(select max(salary) from employees);
+
+select last_name,salary 
+from employees e
+where salary>(select avg(salary) from employees m where m.department_id=e.department_id group by department_id);
 
 

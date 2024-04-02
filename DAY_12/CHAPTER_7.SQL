@@ -21,9 +21,9 @@
 -- WHERE DEPARTMENT_NAME LIKE 'Finance';
 
 
--- SELECT LAST_NAME,JOB_ID,CITY
--- FROM EMPLOYEES NATURAL JOIN LOCATIONS
--- WHERE CITY='Toronto';
+SELECT LAST_NAME,JOB_ID,CITY
+FROM EMPLOYEES NATURAL JOIN LOCATIONS
+WHERE CITY='Toronto';
 
 
 -- SELECT * FROM LOCATIONS;
@@ -46,14 +46,14 @@
 -- from departments natural join employees
 -- where department_id=110;
 
---   SELECT e.last_name AS "Employee Last Name",
---         e.employee_id AS "Employee ID",
---         e.salary AS "Employee Salary",
---         m.manager_id AS "Manager ID",
---         m.salary AS "Manager Salary"
---     FROM employees e JOIN employees m 
---     ON e.employee_id = m.manager_id
---     where e.salary>m.salary;
+  SELECT e.last_name AS "Employee Last Name",
+        e.employee_id AS "Employee ID",
+        e.salary AS "Employee Salary",
+        m.manager_id AS "Manager ID",
+        m.salary AS "Manager Salary"
+    FROM employees e JOIN employees m 
+    ON e.employee_id = m.manager_id
+    where e.hire_date>m.hire_date;
 
 
 -- select * from employees where last_name='Taylor';
@@ -99,3 +99,11 @@
 -- ON e1.hire_date > e2.hire_date
 -- WHERE e2.last_name = 'Taylor';
 
+
+
+select e.first_name,e.last_name,e.job_id,d.department_id,d.department_name,loc.city
+from employees e join departments d
+on e.department_id=d.department_id
+join locations loc
+on d.location_id= loc.location_id
+where city='Toronto';
