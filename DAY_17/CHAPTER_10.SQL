@@ -70,8 +70,7 @@ drop table MyDept
 
 CREATE TABLE MyEmppp(
     emp_id NUMBER(7) PRIMARY KEY,
-    salary NUMBER(10),
-    CONSTRAINT check_salary CHECK (salary BETWEEN 3000 AND 10000),
+    salary NUMBER(10), CHECK (salary BETWEEN 3000 AND 10000),
     last_name VARCHAR(25),
     CONSTRAINT check_last_name CHECK (last_name = UPPER(last_name)),
     first_name VARCHAR(25),
@@ -80,3 +79,5 @@ CREATE TABLE MyEmppp(
 );
 
 drop table MyEmppp;
+
+
